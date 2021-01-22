@@ -1,0 +1,57 @@
+<ion-content class="bg-image">
+  <div class="body-register">
+      <div class="logo-register">
+        <img src="../../assets/images/WhiteDog.png" alt="" width="80%" class="logo-login_img">
+      </div>
+    <div class="row-register">
+      <form (ngSubmit)="register()">
+
+        <ion-row>
+          <ion-col size=12>
+            <input type="text" name="name" class="input-register" [(ngModel)]="users.name" placeholder="Name">
+          </ion-col>
+          <ion-col size=12>
+            <input type="text" name="lastname" class="input-register" [(ngModel)]="users.lastname"
+              placeholder="Last Name">
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size=12>
+            <select name="opcionSeleccionado" [(ngModel)]="opcionSeleccionado" (change)="Gender()"
+              class="select-register">
+              <option value="gender">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </ion-col>
+          <ion-col size=12>
+            <input type="date" name="birthdate" class="input-register" max="{{fechamax}}" [(ngModel)]="users.birthday">
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size=12>
+            <input type="email" name="email" class="input-register" [(ngModel)]="users.email" placeholder="Email">
+
+          </ion-col>
+          <ion-col size=12>
+            <input type="password" name="password" class="input-register" [(ngModel)]="users.password"
+              placeholder="Password">
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <button class="button-register" type="submit">
+            Register
+          </button>
+        </ion-row>
+        <div class="h6-register">
+          <span routerLink="/login">You already have an account? log in</span>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</ion-content>

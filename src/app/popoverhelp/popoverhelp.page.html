@@ -1,0 +1,71 @@
+    <ion-header>
+        <ion-toolbar  [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}">
+          <ion-title class="tittle-home">Ayuda</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content class="customer">
+        <ion-slides [options]="sliderConfig" pager="true">
+          <ion-slide>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                    <p><ion-icon name="home"></ion-icon> Locales </p>
+                </ion-card-title>
+                <ion-card-content>
+                    <p> Selecciona el local en el cual deseas reservar, una vez seleccionado escoje el dia y la hora
+                        que deseas reservar (¡nosotros te colocamos el dia de hoy como predeterminado!)</p>
+                        <p>Si el local contiene apartado de extras puedes seleccionar los que quieras a tu gusto</p>
+                        <p>Dependiendo del local podras seleccionar el servicio a reservar o se escogera automaticamente</p>
+                        <p>Una vez completados los campos de la reserva, pulsa el boton de reserva y confirma la misma</p>
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+          <ion-slide>
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>
+                      <p><ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon> Reservas </p>
+                  </ion-card-title>
+                  <ion-card-content>
+                      <p>En esta pestaña apareceran todas tus reservas activas</p>
+                  </ion-card-content>
+                </ion-card-header>
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-title>
+                        <p><ion-icon name="heart"></ion-icon> Favoritos </p>
+                    </ion-card-title>
+                    <ion-card-content>
+                        <p>En esta pestaña estaran tus locales favoritos</p>
+                        <p>Para agregar un local a favoritos, entra desde la pestaña Locales al local que quisieras colocar como favorito, una vez alli
+                        pulsa el corazon que se encuentra arriba a la derecha</p>
+                        <p>¡Agrega tantos locales a favoritos como quieras!</p>
+                    </ion-card-content>
+                  </ion-card-header>
+                </ion-card>
+              </ion-slide>
+              <ion-slide>
+                  <ion-card>
+                    <ion-card-header>
+                      <ion-card-title>
+                          <p><ion-icon name="person"></ion-icon> Usuario </p>
+                      </ion-card-title>
+                      <ion-card-content>
+                          <p>En esta pestaña podras editar tu nombre y apellido</p>
+                          <p>Cuando hayas terminado de editarlo pulsa Guardar</p>
+                          <p>Tambien podras seleccionar algun tema para la app ¡Escoge tu color favorito!</p>
+                      </ion-card-content>
+                    </ion-card-header>
+                  </ion-card>
+                </ion-slide>
+        </ion-slides>
+      <ion-row>
+        <ion-button [ngClass]="{'extrass-button_default':userActivo.tema == 'default', 'extrass-button_red':userActivo.tema == 'red', 'extrass-button_tur':userActivo.tema == 'tur', 'extrass-button_green':userActivo.tema == 'green'}" (click)="closePopOver()">Entendido</ion-button>
+      </ion-row>
+      </ion-content>
+

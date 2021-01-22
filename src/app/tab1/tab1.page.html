@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar
+    [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}">
+    <ion-title class="tittle-home">
+      Reservas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="reservas.length != 0; else templateName2">
+    <div *ngFor="let reserva of reservas" class="costumer-item">
+      <ion-row
+        [ngClass]="{'bg-items_default':userActivo.tema == 'default', 'bg-items_red':userActivo.tema == 'red', 'bg-items_tur':userActivo.tema == 'tur', 'bg-items_green':userActivo.tema == 'green'}">
+
+        <ion-col size=8>
+
+          <p class="p-title"> Número de Reserva: {{ reserva.reserva }} </p>
+          <p> Local: {{ reserva.local }} </p>
+          <p> Actividad: {{ reserva.actividad }} </p>
+          <p> Fecha: {{ reserva.fecha }} </p>
+          <p> Reserva: {{ reserva.servicio }} </p>
+          <p> Hora: {{ reserva.hora }} </p>
+          <!-- <p> Hora Actual: {{ this.horaActual }} </p> -->
+          <div *ngIf="extras.length != 0;else tieneextras(reserva)"></div>
+          <div *ngIf="extras.length != 0;else templateName">
+            <span>Extras: {{extrasString}}</span>
+          </div>
+
+          <!-- <div *ngIf="reserva.fecha >= this.datetime && reserva.hora >= this.horaActual">
+          </div> -->
+          <button type="button" (click)="cancelarReserva(reserva.id)" class="cancerlar"
+              [ngClass]="{'cancerlar_default':extras.length != 0 && userActivo.tema == 'default', 'cancerlar2_default':extras.length == 0 && userActivo.tema == 'default', 'cancerlar_red':extras.length != 0 && userActivo.tema == 'red', 'cancerlar2_red':extras.length == 0 && userActivo.tema == 'red', 'cancerlar_green':extras.length != 0 && userActivo.tema == 'green', 'cancerlar2_green':extras.length == 0 && userActivo.tema == 'green', 'cancerlar_tur':extras.length != 0 && userActivo.tema == 'tur', 'cancerlar2_tur':extras.length == 0 && userActivo.tema == 'tur'}">
+              Cancelar Reserva </button>
+
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+
+<ng-template #templateName>
+  <p>Sin extras</p>
+</ng-template>
+
+<ng-template #templateName2>
+  <ion-row class="rowtemplate">
+    <ion-col size=12>
+      <p
+        [ngClass]="{'ptemplate_default':userActivo.tema == 'default', 'ptemplate_red':userActivo.tema == 'red', 'ptemplate_tur':userActivo.tema == 'tur', 'ptemplate_green':userActivo.tema == 'green'}">
+        No posees reservas activas en este momento</p>
+    </ion-col>
+    <img src="../../assets/images/logi.png" height="250px">
+  </ion-row>
+</ng-template>

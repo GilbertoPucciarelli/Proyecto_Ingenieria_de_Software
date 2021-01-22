@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Paradisee';
+    src: url('../../assets/fonts/OptimusPrinceps.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TheQueen';
+    src: url('../../assets/fonts/AppleGaramond.ttf') format('truetype');
+  }
+
+.bg-image{
+    --background: url(../../assets/images/azul3.jpg) 0 0/100% 100% no-repeat;
+}
+
+.body-register{
+    height: 100%;
+    width: 100%;
+}
+.row-register{
+    height: 50vh;
+    width: 100%;
+}
+
+.logo-register{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-login_img{
+    display: block;
+    margin: auto;
+}
+
+.input-register{
+    border-radius: 3px;
+    border-style: none;
+    padding: 5px;
+    width: -webkit-fill-available;
+    margin: 0% 8% 5%;
+    height: 7.2vh;
+    font-size: 17px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #00000069;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+    min-height: 50px;
+}
+
+.button-register{
+    border-radius: 3px;
+    padding: 5px;
+    width: -webkit-fill-available;
+    margin: 10% 8% 5%;
+    height: 7.2vh;
+    font-size: 17px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #0c93b9;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+    min-height: 50px;
+}
+
+::placeholder{
+    color: white;
+    font-family: TheQueen;
+    font-weight: bold;
+    text-align: center;
+}
+
+.h6-register{
+    text-align: center;
+    margin: 3% 0 8%;
+    font-size: 17px;
+    color: white;    
+    text-shadow: 1px 1px 1px #00000087;
+    font-family: TheQueen;
+    font-weight: bold
+}
+
+.select-register{
+    border-radius: 3px;
+    border-style: none;
+    padding: 5px;
+    width: -webkit-fill-available;
+    margin: 0% 8% 5%;
+    height: 7.2vh;
+    font-size: 17px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #00000069;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+    min-height: 50px;
+}
+
+select{
+    text-align-last:center;
+}

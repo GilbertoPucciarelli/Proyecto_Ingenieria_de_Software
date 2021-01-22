@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="cerrarSesion()">
+            <ion-icon slot="icon-only" name="ios-log-out" ></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title
+      [ngClass]="{'tittle-home_default':userActivo.tema == 'default', 'tittle-home_red':userActivo.tema == 'red', 'tittle-home_tur':userActivo.tema == 'tur', 'tittle-home_green':userActivo.tema == 'green'}">
+      Perfil Usuario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}">
+  <div class="body-register">
+    <div class="row-register">
+      <form (ngSubmit)="update()">
+        <ion-row>
+          <ion-col size=12>
+            <span class="span-local">Actualiza tus datos</span>
+          </ion-col>
+          <ion-col size=12>
+            <input type="text" name="nombre"
+              [ngClass]="{'input-register_default':userActivo.tema == 'default', 'input-register_red':userActivo.tema == 'red', 'input-register_tur':userActivo.tema == 'tur', 'input-register_green':userActivo.tema == 'green'}"
+              [(ngModel)]="userActivo.name" placeholder="{{userActivo.name}}">
+          </ion-col>
+          <ion-col size=12>
+            <input type="text" name="apellido"
+              [ngClass]="{'input-register_default':userActivo.tema == 'default', 'input-register_red':userActivo.tema == 'red', 'input-register_tur':userActivo.tema == 'tur', 'input-register_green':userActivo.tema == 'green'}"
+              [(ngModel)]="userActivo.lastname" placeholder="{{userActivo.lastname}}">
+          </ion-col>
+          <ion-col size=12>
+            <select name="opcionSeleccionado" [(ngModel)]="opcionSeleccionado" (change)="Gender()"
+              [ngClass]="{'input-register_default':userActivo.tema == 'default', 'input-register_red':userActivo.tema == 'red', 'input-register_tur':userActivo.tema == 'tur', 'input-register_green':userActivo.tema == 'green'}">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </ion-col>
+          <ion-col size=12>
+            <input type="date" name="birthdate"
+              [ngClass]="{'input-register_default':userActivo.tema == 'default', 'input-register_red':userActivo.tema == 'red', 'input-register_tur':userActivo.tema == 'tur', 'input-register_green':userActivo.tema == 'green'}"
+              [(ngModel)]="userActivo.birthday">
+          </ion-col>
+          <ion-col size=12>
+            <button
+              [ngClass]="{'button-register_default':userActivo.tema == 'default', 'button-register_red':userActivo.tema == 'red', 'button-register_tur':userActivo.tema == 'tur', 'button-register_green':userActivo.tema == 'green'}"
+              type="submit">
+              Guardar
+            </button>
+          </ion-col>
+          <ion-col size=12>
+              <ion-list class="list-tema">
+                <ion-row>
+                  <span>Elige tu tema</span>
+                </ion-row>
+                <ion-row>
+                  <ion-radio-group style="margin: auto">
+                      <ion-radio style="--color:blue" class="custom-radio" mode="md" color="primary" checked="{{azul}}" (click)="cambiarTema('default')"></ion-radio>
+                      <ion-radio style="--color:red" class="custom-radio" mode="md" color="danger" checked="{{rojo}}" (click)="cambiarTema('red')"></ion-radio>
+                      <ion-radio style="--color:green" class="custom-radio" mode="md" color="success" checked="{{verde}}" (click)="cambiarTema('green')"></ion-radio>
+                      <ion-radio style="--color:purple" class="custom-radio" mode="md" color="tertiary" checked="{{morado}}" (click)="cambiarTema('tur')"></ion-radio>
+                  </ion-radio-group>
+                </ion-row>
+              </ion-list>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+</ion-content>

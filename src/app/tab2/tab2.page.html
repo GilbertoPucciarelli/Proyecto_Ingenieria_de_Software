@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}" >
+    <ion-title class="tittle-home">
+      Favoritos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar >
+  <ion-searchbar placeholder="Search" animated debounce=0 mode="ios"(ionChange)="busqueda($event)"></ion-searchbar>
+</ion-toolbar>
+
+<ion-content >
+    <div *ngIf="locales.length != 0; else templateName2">
+  <div *ngFor="let local of locales" class="costumer-item">
+      <ion-row [ngClass]="{'bg-items_default':userActivo.tema == 'default', 'bg-items_red':userActivo.tema == 'red', 'bg-items_tur':userActivo.tema == 'tur', 'bg-items_green':userActivo.tema == 'green'}" (click)="seleccion(local.nombre)">
+            <ion-col size=4>
+                <img src={{local.img}} width="90px" height="90px" class="img-home">
+            </ion-col>
+            <ion-col size=8>
+              <p class="p-title">{{local.nombre}}</p>
+              <p>{{local.descripcion}}</p>
+            </ion-col>
+        </ion-row>
+  </div>
+</div>
+</ion-content>
+
+<ng-template #templateName2>
+    <ion-row class="rowtemplate">
+     <ion-col size=12><p [ngClass]="{'ptemplate_default':userActivo.tema == 'default', 'ptemplate_red':userActivo.tema == 'red', 'ptemplate_tur':userActivo.tema == 'tur', 'ptemplate_green':userActivo.tema == 'green'}" >No posees locales favoritos</p></ion-col>
+      <img src="../../assets/images/logi.png" height="250px">
+    </ion-row>
+    </ng-template>

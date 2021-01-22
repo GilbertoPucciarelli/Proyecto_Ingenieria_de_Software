@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="closeModal2()">
+            <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="tittle-home">{{info}}s</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-image">
+    <section *ngFor="let item of array; let i = index;">
+        <label>{{info}} {{i}}</label>
+        <div>
+          <ion-col size=6><input class="input-register" type="text" [(ngModel)]="array[i]" name="servicios_{{i}}"/></ion-col>
+          <ion-col size=6><button class="button-register_eliminar" type="button" (click)="removeArray(i)">Eliminar {{info}}</button></ion-col>
+        </div>
+  </section>
+  <button type="button" class="button-register" (click)="addArray()">Agregar {{info}}</button>
+  <ion-button class="extrass-button" expand="full" fill="fill" color="success" (click)="closeModal()">Guardar</ion-button>
+</ion-content>

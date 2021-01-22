@@ -1,0 +1,40 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" *ngIf="this.userActivo.admin == false">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Locales</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="reserva" *ngIf="this.userActivo.admin == false">
+      <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
+      <ion-label>Reservas</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="fav" *ngIf="this.userActivo.admin == false">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Favoritos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="user" *ngIf="this.userActivo.admin == false">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>Usuario</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="worker" *ngIf="this.userActivo.admin == true">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="reservaciones" *ngIf="this.userActivo.admin == true">
+      <ion-icon name="ios-checkmark"></ion-icon>
+      <ion-label>Reservas</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="conversaciones" *ngIf="this.userActivo.admin == true">
+      <ion-icon name="send"></ion-icon>
+      <ion-label>Mensajes</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

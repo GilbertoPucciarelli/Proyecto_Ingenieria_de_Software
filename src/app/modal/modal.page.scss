@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'TheQueen';
+    src: url('../../assets/fonts/AppleGaramond.ttf') format('truetype');
+  }
+
+.bg-image{
+    --background: url(../../assets/images/azul3.jpg) 0 0/100% 100% no-repeat;
+    color: white
+}
+
+.input-register{
+    border-radius: 3px;
+    border-style: none;
+    padding: 5px;
+    height: 7.2vh;
+    font-size: 2vh;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #000050;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+    width: 45vw;
+    margin: 2% 2% 2% 2%;
+}
+
+.button-register{
+    border-radius: 3px;
+    padding: 5px;
+    width: -webkit-fill-available;
+    margin: 10% 8% 5%;
+    height: 7.2vh;
+    font-size: 2vh;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #0c93b9;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+}
+
+.button-register_eliminar{
+    border-radius: 3px;
+    padding: 5px;
+    width: 42vw;
+    margin: 2% 2% 2% 2%;
+    height: 7.2vh;
+    font-size: 2vh;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #b40e0e;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+}
+
+.extrass-button{
+    --border-radius: 3px;
+      width: 80vw;
+      height: 7vh;
+      font-size: 2vh;
+      text-align: center;
+      --box-shadow: 8px 8px 8px #36323299;
+      --background: #00bdf3;
+      --color: white;
+      --text-shadow: 2px 2px 2px #000000;
+      --font-family: TheQueen;
+      display: block;
+      font-weight: bold;
+      margin: auto;
+      text-transform: none;
+  }
+
+  .tittle-home{
+    font-family: TheQueen;
+    font-weight: bold;   
+    text-align: center;
+    font-size: 25px;
+    color: #023968;
+    text-shadow: 1px 1px 1px #00000087;
+  }
+
+  label{
+    text-align: center;
+    margin: 1% 1% 1% 1%;
+    color: white;
+    text-shadow: 1px 1px 1px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+    display: block;
+  }

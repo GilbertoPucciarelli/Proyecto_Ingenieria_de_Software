@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title
+      [ngClass]="{'tittle-home_default':userActivo.tema == 'default', 'tittle-home_red':userActivo.tema == 'red', 'tittle-home_tur':userActivo.tema == 'tur', 'tittle-home_green':userActivo.tema == 'green'}">
+      {{local.nombre}}</ion-title>
+    <ion-buttons slot="end">
+      <div *ngIf="fav == false;else templateName">
+        <ion-button (click)="favorito()">
+          <ion-icon slot="icon-only" name="heart-empty"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div>
+        <ion-button (click)="seleccion(local.nombre)">
+          <ion-icon slot="icon-only" name="paper-plane"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}">
+  <div class="list card">
+    <ion-item
+      [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}">
+      <div class="profile-picture big-profile-picture">
+        <img src="{{local.img}}" height="100%" width="100%">
+      </div>
+      <ion-label>
+        <h2 class="profile-name">{{local.nombre}}</h2>
+        <p>{{local.descripcion}}</p>
+        <p>Teléfono: {{local.numero}}</p>
+      </ion-label>
+    </ion-item>
+  </div>
+  <div>
+    <form (ngSubmit)="reservar()">
+      <ion-row class="row-register">
+        <span class="span-local">Personaliza tu reserva</span>
+      </ion-row>
+      <ion-row [ngClass]="{'row-register9':extras == true && local.picks != true,'row-register2':extras == true && local.picks == true, 'row-register7':extras != true && local.picks != true}">
+        <ion-row class="row-register">
+          <span class="span-local">Actividad: {{local.actividad}}</span>
+
+          <input type="date" name="fecha" id='fecha'
+            [ngClass]="{'input-register_default':userActivo.tema == 'default', 'input-register_red':userActivo.tema == 'red', 'input-register_tur':userActivo.tema == 'tur', 'input-register_green':userActivo.tema == 'green'}"
+            [(ngModel)]="reservas.fecha" (click)="cambiar2()" min="{{foriginal}}" max="{{fsemana}}">
+
+        </ion-row>
+        <ion-row>
+
+          <select id="horas" name="horaSeleccionada" [(ngModel)]="horaSeleccionada" (change)="Hora()"
+            (click)="verificar2()"
+            [ngClass]="{'input-register_default':userActivo.tema == 'default', 'input-register_red':userActivo.tema == 'red', 'input-register_tur':userActivo.tema == 'tur', 'input-register_green':userActivo.tema == 'green'}">
+            <option selected disabled hidden value="Hora">Hora</option>
+            <option *ngFor="let hora of horas" value={{hora}}>{{hora}}</option>
+          </select>
+
+          <ion-row *ngIf="local.picks == true && horaSeleccionada != 'Hora';else templateName2">
+              <select id="horas" name="mesaSeleccionada" [(ngModel)]="mesaSeleccionada"
+              [ngClass]="{'input-register_default':userActivo.tema == 'default', 'input-register_red':userActivo.tema == 'red', 'input-register_tur':userActivo.tema == 'tur', 'input-register_green':userActivo.tema == 'green'}">
+              <option selected disabled hidden value="Servicio">Servicio</option>
+              <option *ngFor="let servicio of servicios" value={{servicio}}>{{servicio}}</option>
+            </select>
+          </ion-row>
+
+          <div *ngIf="extras == true;else templateName1" class="row-register3">
+            <ion-col>
+              <ion-button shape="round" expand="block" (click)="openPopover($event)"
+                [ngClass]="{'extrass-button_default':userActivo.tema == 'default', 'extrass-button_red':userActivo.tema == 'red', 'extrass-button_tur':userActivo.tema == 'tur', 'extrass-button_green':userActivo.tema == 'green'}">
+                Extras</ion-button>
+              <div *ngIf="extrasString != ' '">
+                <p>{{extrasString}}</p>
+              </div>
+            </ion-col>
+          </div>
+        </ion-row>
+      </ion-row>
+
+      <ion-row class="row-register4">
+        <button
+          [ngClass]="{'button-register_default':userActivo.tema == 'default', 'button-register_red':userActivo.tema == 'red', 'button-register_tur':userActivo.tema == 'tur', 'button-register_green':userActivo.tema == 'green'}"
+          type="submit">
+          Reservar
+        </button>
+      </ion-row>
+    </form>
+  </div>
+  <div class="row-register5">
+    <h6 class="h6-login">Al reservas estas aceptando los términos y condiciones</h6>
+  </div>
+</ion-content>
+
+<ng-template #templateName>
+  <ion-button (click)="delfavorito()">
+    <ion-icon slot="icon-only" name="heart"></ion-icon>
+  </ion-button>
+</ng-template>
+
+<ng-template #templateName1>
+
+</ng-template>
+
+<ng-template #templateName2>
+
+  </ng-template>

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="ios-log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="tittle-home">{{local.nombre}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-toggle checked="{{disponible}}" mode="ios" color="danger" (ionChange)="cambiar()" class="disponible-worker">
+      </ion-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-image">
+  <div class="body-register">
+    <div class="row-register2">
+      <ion-row class="img-worker">
+        <img src="{{local.img}}" alt="" style="border-radius: 100%; box-shadow: 5px 5px 10px #1e2023;" height="100vh" width="100vw">
+      </ion-row>
+    </div>
+    <div class="row-register">
+      <form #addressForm="ngForm" (ngSubmit)="update()">
+
+        <ion-row>
+          <ion-col size=12>
+            <input type="text" name="nombre" class="input-register" [(ngModel)]="local.nombre"
+              placeholder="{{local.nombre}}">
+          </ion-col>
+          <ion-col size=12>
+            <input type="text" name="direccion" class="input-register" [(ngModel)]="local.direccion"
+              placeholder="{{local.direccion}}">
+          </ion-col>
+          <ion-col size=12>
+            <input type="text" name="descripcion" class="input-register" [(ngModel)]="local.descripcion"
+              placeholder="{{local.descripcion}}">
+          </ion-col>
+          <ion-col size=12>
+            <input type="text" name="numero" class="input-register" [(ngModel)]="local.numero"
+              placeholder="{{local.numero}}">
+          </ion-col>
+          <ion-col size=12>
+            <ion-button class="extrass-button" expand="full" (click)="openModal(servicios,'Servicio')">Servicios</ion-button>
+          </ion-col>
+          <ion-col size=12>
+            <ion-button class="extrass-button" expand="full" (click)="openModal(horas,'Hora')">Horas</ion-button>
+          </ion-col>
+          <ion-col size=12>
+            <ion-button class="extrass-button" expand="full" (click)="openModal(extras,'Extra')">Extras</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <button class="button-register" type="submit">
+            Update
+          </button>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+</ion-content>

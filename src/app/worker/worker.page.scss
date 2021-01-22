@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'TheQueen';
+    src: url('../../assets/fonts/AppleGaramond.ttf') format('truetype');
+  }
+
+.bg-image{
+    --background: url(../../assets/images/azul3.jpg) 0 0/100% 100% no-repeat;
+    color: white
+}
+
+.body-register{
+    height: 100vh;
+    width: 100%;
+}
+.row-register{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.row-register2{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-register{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.logo-login_img{
+    display: block;
+    margin: auto;
+ }
+
+.input-register{
+    border-radius: 3px;
+    border-style: none;
+    padding: 5px;
+    width: 85vw;
+    margin: 1% 6% 1% 6%;
+    height: 7.2vh;
+    font-size: 2vh;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #000050;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+}
+
+.button-register{
+    border-radius: 3px;
+    padding: 5px;
+    width: -webkit-fill-available;
+    margin: 10% 8% 5%;
+    height: 7.2vh;
+    font-size: 2vh;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000000a3;
+    background-color: #0c93b9;
+    color: white;
+    text-shadow: 2px 2px 2px #00000087;
+    font-family: TheQueen;
+    font-weight: bold;
+}
+
+::placeholder{
+    color: white;
+    font-family: Arial;
+    font-weight: bold
+}
+
+.h6-register{
+    text-align: center;
+    margin: 3% 0 8%;
+    font-size: 12px;
+    color: white;
+    text-shadow: 1px 1px #838996;
+    font-family: Arial;
+    font-weight: bold
+}
+
+.select-register{
+    border-radius: 25px;
+    border-style: none;
+    padding: 5px;
+    width: -webkit-fill-available;
+    margin: 0% 2% 2%;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px #0000006e;
+    background-color: #ffffff33;
+    color: white;
+    text-shadow: 1px 1px #838996;
+    font-family: Arial;
+    font-weight: bold
+}
+
+select:focus{
+    background:  #fff4b4;
+    text-align: center;
+    outline: 0;
+}
+
+.tittle-home{
+    font-family: TheQueen;
+    font-weight: bold;   
+    text-align: center;
+    font-size: 25px;
+    color: #023968;
+    text-shadow: 1px 1px 1px #00000087;;
+  }
+
+.img-worker{
+   justify-content: center;
+  }
+
+.disponible-worker{
+    display: block;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px #838996;
+    font-family: Arial;
+    font-weight: bold
+}
+
+.extrass-button{
+    --border-radius: 3px;
+      width: 80vw;
+      height: 7vh;
+      font-size: 2vh;
+      text-align: center;
+      --box-shadow: 8px 8px 8px #36323299;
+      --background: #00bdf3;
+      --color: white;
+      --text-shadow: 2px 2px 2px #000000;
+      --font-family: TheQueen;
+      display: block;
+      font-weight: bold;
+      margin: auto;
+      text-transform: none;
+  }

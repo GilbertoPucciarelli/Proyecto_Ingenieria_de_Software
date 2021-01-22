@@ -1,0 +1,30 @@
+<ion-content class="bg-image">
+   <div class="body-login">
+      <div class="row-login">
+          <div class="logo-login">
+              <img src="../../assets/images/WhiteDog.png" alt="" width="80%" class="logo-login_img">
+            </div>
+          </div>
+        <div class="row-login">
+            <form (ngSubmit)="login()">
+                <ion-row>
+                    <input type="email" name="email" class="input-login" [(ngModel)]="users.email" placeholder="Email">
+                </ion-row>
+                <ion-row>
+                    <input type="password" name="password" class="input-login" [(ngModel)]="users.password" placeholder="Password">
+                </ion-row>
+                <ion-row>
+                    <button class="button-login" type="submit">
+                        Sign in
+                    </button>
+                </ion-row>
+                <!-- <div class="h6-login">
+                  <span>Forgotten Password?</span>
+                </div> -->
+                <div class="h6-login">
+                  <span routerLink="/register">Create a new account</span>
+                </div>
+          </form>
+        </div>
+   </div>    
+</ion-content>

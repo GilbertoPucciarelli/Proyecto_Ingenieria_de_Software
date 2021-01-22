@@ -1,0 +1,498 @@
+@font-face {
+  font-family: 'Cheeky';
+  src: url('../../assets/fonts/ComicNeueSansID.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TheQueen';
+  src: url('../../assets/fonts/AppleGaramond.ttf') format('truetype');
+}
+
+.profile-item {
+  text-align: center;
+  --background: url(../../assets/images/fondo.jpg) 0 0/100% 100% no-repeat;
+}
+
+.profile-picture {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 3px;
+  border-radius: 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.profile-picture img {
+  width: 128px;
+  border-radius: 100%;
+}
+
+.profile-name {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold !important;
+  text-transform: capitalize;
+  font-family: TheQueen;
+  color: white;
+  text-align: center;
+}
+
+.bg-image_default{
+  --background: url(../../assets/images/azul3.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+.bg-image_red{
+  --background: url(../../assets/images/rojo.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+.bg-image_green{
+  --background: url(../../assets/images/verde.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+.bg-image_tur{
+  --background: url(../../assets/images/morad.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+@font-face {
+font-family: 'Paradisee';
+src: url('../../assets/fonts/OptimusPrinceps.ttf') format('truetype');
+}
+
+.body-register{
+height: 100vh;
+width: 100%;
+}
+
+.row-register0{
+  height: 2vh;
+  width: 100%;
+}
+.row-register{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-register2{
+  height: 60vh;
+  width: 100%;
+}
+
+.row-register9{
+  height: 40vh;
+  width: 100%;
+}
+.row-register4{
+  height: 12vh;
+  width: 100%;  
+}
+  
+.row-register7{
+  height: 30vh;
+  width: 100%;  
+}
+
+.row-register5{
+  height: 15vh;
+  width: 100%;  
+}
+
+.row-register3{
+  width: 100%;  
+}
+
+.row-register6{
+  width: 100%;  
+}
+
+.logo-login_img{
+display: block;
+margin: auto;
+}
+
+.input-register_default{
+  border-radius: 3px;
+  border-style: none;
+  padding: 5px;
+  width: 100vw;
+  margin: 5% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #000050;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.input-register_red{
+  border-radius: 3px;
+  border-style: none;
+  padding: 5px;
+  width: 100vw;
+  margin: 5% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #d15858a6;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.input-register_green{
+  border-radius: 3px;
+  border-style: none;
+  padding: 5px;
+  width: 100vw;
+  margin: 5% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #2e8707;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.input-register_tur{
+  border-radius: 3px;
+  border-style: none;
+  padding: 5px;
+  width: 100vw;
+  margin: 5% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #c20080;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.button-register_default{
+  border-radius: 3px;
+  padding: 5px;
+  width: -webkit-fill-available;
+  margin: 10% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #0c93b9;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.button-register_red{
+  border-radius: 3px;
+  padding: 5px;
+  width: -webkit-fill-available;
+  margin: 10% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #5d0000;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.button-register_green{
+  border-radius: 3px;
+  padding: 5px;
+  width: -webkit-fill-available;
+  margin: 10% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #2ac24a;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.button-register_tur{
+  border-radius: 3px;
+  padding: 5px;
+  width: -webkit-fill-available;
+  margin: 10% 8% 5%;
+  height: 7.2vh;
+      font-size: 17px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  background-color: #ffb8e4;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+}
+
+.button-register2{
+  border-radius: 25px;
+  padding: 5px;
+  width: -webkit-fill-available;
+  margin: 7% 8% 5%;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 8px 8px 8px #36323299;
+  background-color: #ffa68cd6;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  font-weight: bold
+  }
+
+::placeholder{
+color: white;
+font-family: TheQueen;
+font-weight: bold
+}
+
+.h6-register{
+text-align: center;
+margin: 3% 0 8%;
+font-size: 12px;
+color: white;
+text-shadow: 1px 1px #838996;
+font-family: TheQueen;
+font-weight: bold
+}
+
+.select-register{
+border-radius: 25px;
+border-style: none;
+padding: 0px 38px;
+width: -webkit-fill-available;
+margin: 0% 7% 2%;
+height: 45px;
+font-size: 20px;
+text-align: center;
+box-shadow: 5px 5px 9px #36323287;
+background-color: #ffffff33;
+color: white;
+text-shadow: 2px 2px 2px #00000087;
+font-family: TheQueen;
+font-weight: bold
+}
+
+
+p{
+  font-family: TheQueen;
+  color: white;
+  text-shadow: 1px 1px 1px #00000087;
+  text-align: center;
+}
+
+.tittle-home_default{
+  font-family: TheQueen;
+  font-weight: bold;   
+  text-align: center;
+  font-size: 25px;
+  color: #023968;
+  text-shadow: 1px 1px 1px #00000087;
+}
+
+.tittle-home_red{
+  font-family: TheQueen;
+  font-weight: bold;   
+  text-align: center;
+  font-size: 25px;
+  color: #680202;
+  text-shadow: 1px 1px 1px #00000087;
+}
+
+.tittle-home_green{
+  font-family: TheQueen;
+  font-weight: bold;   
+  text-align: center;
+  font-size: 25px;
+  color: #165e0e;
+  text-shadow: 1px 1px 1px #00000087;
+}
+
+.tittle-home_tur{
+  font-family: TheQueen;
+  font-weight: bold;   
+  text-align: center;
+  font-size: 25px;
+  color: #a100aa;
+  text-shadow: 1px 1px 1px #00000087;
+}
+
+.h6-login{
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  text-shadow: 1px 1px 1px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+  padding: 20px;
+  display: grid;
+}
+
+.span-local{
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 1px #00000087;
+  font-family: TheQueen;
+  font-weight: bold;
+  padding: 20px;
+  display: contents;
+}
+
+.button-local{
+  justify-content: center;
+  border-radius: 25px;
+  width: 100px;
+  box-shadow: 8px 8px 8px #36323299;
+  background-color: #ffa68cd6;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  padding: 5px;
+  margin: 2% 8% 5%
+}
+
+.arreglo{
+  display: grid;
+  width: 100%;
+  justify-content: center;
+}
+
+input:invalid{
+  color: white,
+  
+}
+
+.extras-button{
+  border-radius: 25px;
+  width: 41%;
+  height: 48px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 8px 8px 8px #36323299;
+  background-color: #ffa68cd6;
+  color: white;
+  text-shadow: 2px 2px 2px #00000087;
+  font-family: TheQueen;
+  display: block;
+  font-weight: bold;
+  margin: auto;
+}
+
+.extrass-button_default{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #00bdf3;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    text-transform: none;
+}
+
+
+.extrass-button_red{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #be3800e8;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    text-transform: none;
+}
+
+
+.extrass-button_green{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #5eb76f;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    text-transform: none;
+}
+
+
+.extrass-button_tur{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #ca006d;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: auto;
+    text-transform: none;
+}
+
+select {
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  appearance: unset;
+  text-align-last:center;
+}
+
+.tabla-extras{
+  text-align: center;
+  box-shadow: 8px 8px 8px #36323299;
+  background-color: #ffa68cd6;
+  color: white;
+  font-family: TheQueen;
+  width: 40%;
+  border-radius: 25px;
+  display: grid;
+  margin: auto;
+}

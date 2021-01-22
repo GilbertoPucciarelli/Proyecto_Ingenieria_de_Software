@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'TheQueen';
+    src: url('../../assets/fonts/AppleGaramond.ttf') format('truetype');
+  }
+  
+  .bg-image_default{
+    --background: url(../../assets/images/azul3.jpg) 0 0/100% 100% no-repeat;
+    color: white
+  }
+  
+  .bg-image_red{
+    --background: url(../../assets/images/rojo.jpg) 0 0/100% 100% no-repeat;
+    color: white
+  }
+  
+  .bg-image_green{
+    --background: url(../../assets/images/verde.jpg) 0 0/100% 100% no-repeat;
+    color: white
+  }
+  
+  .bg-image_tur{
+    --background: url(../../assets/images/morad.jpg) 0 0/100% 100% no-repeat;
+    color: white
+  }
+
+.customer{
+    margin: auto;
+}
+
+.body{
+  width: 100vw;
+}
+
+.extrass-button_default{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #00bdf3;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: 1% 20% 3% 20%;
+    text-transform: none;
+}
+
+
+.extrass-button_red{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #be3800e8;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: 1% 20% 3% 20%;
+    text-transform: none;
+}
+
+
+.extrass-button_green{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #5eb76f;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: 1% 20% 3% 20%;
+    text-transform: none;
+}
+
+
+.extrass-button_tur{
+  --border-radius: 3px;
+    width: 85vw;
+    height: 7vh;
+        font-size: 17px;
+    text-align: center;
+    --box-shadow: 8px 8px 8px #36323299;
+    --background: #ca006d;
+    --color: white;
+    --text-shadow: 2px 2px 2px #000000;
+    --font-family: TheQueen;
+    display: block;
+    font-weight: bold;
+    margin: 1% 20% 3% 20%;
+    text-transform: none;
+}
+
+.tittle-home{
+  font-family: TheQueen;
+  font-weight: bold;   
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 1px 1px #00000087;
+}

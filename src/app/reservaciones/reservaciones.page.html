@@ -1,0 +1,44 @@
+<ion-header >
+  <ion-toolbar class="bg-image">
+    <ion-title class="tittle-home">Reservaciones Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <div *ngIf="reservas.length != 0; else templateName2">
+      <div *ngFor="let reserva of reservas" class="costumer-item">
+        <ion-row  class="bg-items">
+
+          <ion-col size=8>
+            <p class="p-title"> Realizada por: {{ reserva.nombre }} {{ reserva.apellido }}</p>
+            <p class="p-title"> Número de Reserva: {{ reserva.reserva }} </p>
+            <p class="p-title"> Local: {{ reserva.local }} </p>
+            <p class="p-title"> Actividad: {{ reserva.actividad }} </p>
+            <p class="p-title"> Fecha: {{ reserva.fecha }} </p>
+            <p class="p-title"> Reserva: {{ reserva.servicio }} </p>
+            <p class="p-title"> Hora: {{ reserva.hora }} </p>
+            <div *ngIf="extras.length != 0;else tieneextras(reserva)"></div>
+            <div *ngIf="extras.length != 0;else templateName">
+              <span>Extras: {{extrasString}}</span>
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </div>
+    </div>
+  </ion-content>
+</ion-content>
+
+<ng-template #templateName>
+  <p>Sin extras</p>
+</ng-template>
+
+<ng-template #templateName2>
+  <ion-row class="rowtemplate">
+    <ion-col size=12>
+      <p>No posees reservas activas en este momento</p>
+    </ion-col>
+    <img src="../../assets/images/logi.png" height="250px">
+  </ion-row>
+</ng-template>

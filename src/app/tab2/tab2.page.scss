@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Paradisee';
+  src: url('../../assets/fonts/OptimusPrinceps.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cheeky';
+  src: url('../../assets/fonts/ComicNeueSansID.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TheQueen';
+  src: url('../../assets/fonts/AppleGaramond.ttf') format('truetype');
+}
+
+.bg-image_default{
+  --background: url(../../assets/images/azul3.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+.bg-image_red{
+  --background: url(../../assets/images/rojo.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+.bg-image_green{
+  --background: url(../../assets/images/verde.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+.bg-image_tur{
+  --background: url(../../assets/images/morad.jpg) 0 0/100% 100% no-repeat;
+  color: white
+}
+
+.body-home{
+  height: 100%;
+  width: 100%;
+}
+.row-home{
+  height: 50%;
+  width: 100%;
+}
+
+.logo-home{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+}
+
+.logo-home_img{
+  display: block;
+  margin: auto;
+}
+
+.input-home{
+  border-radius: 25px;
+  border-style: none;
+  padding: 5px;
+  width: -webkit-fill-available;
+  margin: 0% 8% 5%;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 5px #0000006e;
+  background-color: #ffffff33;
+}
+
+.button-home{
+  border-radius: 25px;
+  padding: 5px;
+  width: -webkit-fill-available;
+  margin: 10% 8% 5%;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px black;
+  background-color: #7a0a7f;
+  color: white;
+}
+
+::placeholder{
+  color: white
+}
+
+.h6-home{
+  text-align: center;
+  margin: 3% 0 8%;
+  font-size: 12px;
+  color: white;
+}
+
+.home-list{
+  background-color: transparent
+}
+
+.bg-items_default{
+  background-image: url('../../assets/images/azul3.jpg');
+  width: 90%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 4px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  text-align: center;
+  font-family: TheQueen;
+  color: white;
+}
+
+.bg-items_red{
+  background-image: url('../../assets/images/rojo.jpg');
+  width: 90%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 4px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  text-align: center;
+  font-family: TheQueen;
+  color: white;
+}
+
+.bg-items_green{
+  background-image: url('../../assets/images/verde.jpg');
+  width: 90%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 4px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  text-align: center;
+  font-family: TheQueen;
+  color: white;
+}
+
+.bg-items_tur{
+  background-image: url('../../assets/images/morad.jpg');
+  width: 90%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 4px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px #000000a3;
+  text-align: center;
+  font-family: TheQueen;
+  color: white;
+}
+
+.costumer-item{
+  display: flex;
+  justify-content: center
+}
+
+.img-home{
+  border-radius:50px; 
+  box-shadow: 5px 5px 9px #000000;
+  border-style: solid;
+}
+
+p{
+  margin: 3% 0 8%;
+  font-size: 15px;
+  color: white;
+  font-family: TheQueen;
+}
+
+.p-title{
+  color: white;
+  font-size: 18px;
+  font-weight: bold;    
+  text-shadow: 1px 1px 1px #00000087;
+}
+
+.tittle-home{
+  font-family: TheQueen;
+  font-weight: bold;   
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 1px 1px #00000087;
+}
+
+.bg-image2{
+  background-color: red
+}
+
+.bg-imageSB{
+  --background: #d5d4f4
+}
+
+.SB-atributes{
+    border-radius: 15px;
+}
+
+.ptemplate_default{
+  color: #023968;
+  font-size: 3vh;
+  font-family: 'TheQueen';
+  text-align: center;
+}
+
+.ptemplate_red{
+  color: #680202;
+  font-size: 3vh;
+  font-family: 'TheQueen';
+  text-align: center;
+}
+
+.ptemplate_green{
+  color: #165e0e;
+  font-size: 3vh;
+  font-family: 'TheQueen';
+  text-align: center;
+}
+
+.ptemplate_tur{
+  color: #a100aa;
+  font-size: 3vh;
+  font-family: 'TheQueen';
+  text-align: center;
+}
+
+.rowtemplate{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}

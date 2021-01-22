@@ -1,0 +1,11 @@
+<ion-content class="customer">
+    <ion-list>
+        <ion-item *ngFor="let extra of extras">
+          <ion-label>{{extra.name}}</ion-label>
+          <ion-checkbox slot="end" [(ngModel)]="extra.isChecked" (ionChange)="agregarExtras(extra)"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+  <ion-row>
+    <ion-button [ngClass]="{'extrass-button_default':userActivo.tema == 'default', 'extrass-button_red':userActivo.tema == 'red', 'extrass-button_tur':userActivo.tema == 'tur', 'extrass-button_green':userActivo.tema == 'green'}" (click)="closePopOver()">Agregar Extras</ion-button>
+  </ion-row>
+</ion-content>

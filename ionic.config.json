@@ -1,0 +1,7 @@
+{
+  "name": "LeReserve",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

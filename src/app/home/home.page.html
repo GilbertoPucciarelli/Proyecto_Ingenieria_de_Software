@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar
+    [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}">
+    <ion-buttons slot="start">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon slot="icon-only" name="ios-log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="tittle-home">
+      Locales
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openPopover($event)">
+        <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar>
+  <ion-searchbar placeholder="Search" animated debounce=0 mode="ios" (ionChange)="busqueda($event)"></ion-searchbar>
+</ion-toolbar>
+
+<ion-content>
+  <div *ngFor="let local of locales" class="costumer-item">
+    <ion-row
+      [ngClass]="{'bg-items_default':userActivo.tema == 'default', 'bg-items_red':userActivo.tema == 'red', 'bg-items_tur':userActivo.tema == 'tur', 'bg-items_green':userActivo.tema == 'green'}"
+      (click)="seleccion(local.nombre)">
+      <ion-col size=4>
+        <img src={{local.img}} width="90px" height="90px" class="img-home">
+      </ion-col>
+      <ion-col size=8>
+        <p class="p-title">{{local.nombre}}</p>
+        <p>{{local.descripcion}}</p>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

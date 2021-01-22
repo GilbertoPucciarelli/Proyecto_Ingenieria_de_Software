@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar [ngClass]="{'bg-image_default':userActivo.tema == 'default', 'bg-image_red':userActivo.tema == 'red', 'bg-image_tur':userActivo.tema == 'tur', 'bg-image_green':userActivo.tema == 'green'}">
+    <ion-title class="tittle-home">¡Reserva realizada con exito!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row>
+        <ion-col size=12>
+            <p style="font-weight: bold"> Número de Reserva: {{reserva}} </p>
+            <p> Local: {{ local }} </p>
+            <p> Actividad: {{ actividad }} </p>
+            <p> Fecha: {{ fecha }} </p>
+            <p> Reserva: {{ servicio }} </p>
+            <p> Hora: {{ hora }} </p>
+            <div *ngIf="extras.length != 0;else tieneextras()"></div>
+            <div *ngIf="extras.length != 0;else templateName">
+              <span>Extras: {{extrasString}}</span>
+            </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-button [ngClass]="{'extrass-button_default':userActivo.tema == 'default', 'extrass-button_red':userActivo.tema == 'red', 'extrass-button_tur':userActivo.tema == 'tur', 'extrass-button_green':userActivo.tema == 'green'}" (click)="closePopOver()">Entendido</ion-button>
+      </ion-row>
+</ion-content>
+
+<ng-template #templateName>
+    <p>Sin extras</p>
+  </ng-template>
